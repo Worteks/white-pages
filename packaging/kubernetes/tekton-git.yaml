@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: white-pages-worteks-BRANCH-git
+  namespace: NAMESPACE
+spec:
+  params:
+  - name: url
+    value: https://github.com/Worteks/white-pages
+  - name: revision
+    value: BRANCH
+  type: git

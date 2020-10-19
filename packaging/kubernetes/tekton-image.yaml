@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: white-pages-BRANCH-image
+  namespace: NAMESPACE
+spec:
+  params:
+  - name: url
+    value: registry.registry.svc.cluster.local:5000/NAMESPACE/white-pages:BRANCH
+  type: image
